@@ -1,0 +1,43 @@
+/* GLOBAL */
+section {
+  height: 100vh;
+}
+
+img {
+  width: 50%;
+}
+
+/* HEADER */
+.header {
+}
+
+.headerLogo {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.navList {
+  list-style: none;
+}
+
+/* MAIN */
+.sectionHero {
+}
+
+.sectionProjects {
+}
+
+.projectCard {
+  border: 2px black solid;
+  margin: 10px 0;
+  width: 300px;
+}
+
+/* FOOTER */
+.footer {
+}
+
+/* MEDIA */
+@media (max-width: 426px) {
+  /* Empty */
+}
