@@ -9,6 +9,9 @@ img {
 
 /* HEADER */
 .header {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: space-between;
 }
 
 .headerLogo {
@@ -17,20 +20,65 @@ img {
 }
 
 .navList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   list-style: none;
 }
 
 /* MAIN */
 .sectionHero {
+  display: grid;
+  grid-template-areas: 
+  "introHeading introHeading"
+  "introImg introText"
+  ;
+}
+.introHeading {
+  grid-area: introHeading;
+}
+
+.introImg {
+  grid-area: introImg;}
+
+.introText {
+  grid-area: introText;
+}
+
+.sectionAbout {
+  display: grid;
+  grid-template-areas: 
+  "aboutHeading aboutHeading"
+  "aboutIntro aboutImg"
+  "aboutDescription aboutDescription";
+}
+
+.aboutHeading {
+  grid-area: aboutHeading;
+}
+
+.aboutIntro {
+  grid-area: aboutIntro;
+}
+
+.aboutDescription {
+  grid-area: aboutDescription;
+}
+
+.aboutImg {
+  grid-area: aboutImg;
 }
 
 .sectionProjects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .projectCard {
   border: 2px black solid;
   margin: 10px 0;
   width: 300px;
+  height: 400px;
 }
 
 /* FOOTER */
@@ -39,5 +87,13 @@ img {
 
 /* MEDIA */
 @media (max-width: 426px) {
-  /* Empty */
+ .sectionProjects {
+  grid-template-columns: 1fr;
+ }
+}
+
+@media ((min-width: 427px) and (max-width: 769px)) {
+  .sectionProjects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
